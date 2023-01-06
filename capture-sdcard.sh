@@ -19,7 +19,7 @@ function error ()
 }
 
 if [ ! -e "pishrink" ]; then
-   git clone git@github.com:matthew-l-weber/PiShrink.git pishrink
+   git clone https://github.com/matthew-l-weber/PiShrink.git pishrink
 else
    cd pishrink
    git pull

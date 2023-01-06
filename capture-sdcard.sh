@@ -28,7 +28,7 @@ fi
 
 status "### Capturing RAW disk ###"
 if [ ! -e "${DISK}" ]; then
-   error "Disk doesn't exists, exiting..."
+   error "Disk doesn't exist, exiting..."
    exit 1
 fi
 if [ ! -e "${IMG_NAME}" ]; then

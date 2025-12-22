@@ -3,6 +3,13 @@
 # Error out if any steps fail
 set -e
 
+if [ "$#" -ne 2 ]; then
+    echo "Error: This script requires exactly 2 arguments."
+    echo "Syntax: $0 <block device> <absolute/relative path to image file with name>"
+    echo "  See readme for details."
+    exit 1
+fi
+
 # In format of "/dev/<block device>", i.e., /dev/sdb
 DISK="$1"
 # Get absolute path for image name
@@ -12,13 +19,13 @@ function status ()
 {
    COLOR='\033[0;32m'
    NC='\033[0m' # No Color
-   printf "%s  ######### %s #########%s\n" "${COLOR}" "$1" "${NC}"
+   printf "${COLOR} ######### $1 #########${NC}\n"
 }
 function error ()
 {
    COLOR='\033[0;31m'
    NC='\033[0m' # No Color
-   printf "%s  ######### %s #########%s\n" "${COLOR}" "$1" "${NC}"
+   printf "${COLOR} ######### $1 #########${NC}\n"
 }
 
 if [ ! -e "pishrink" ]; then

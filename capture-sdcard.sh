@@ -7,8 +7,6 @@ set -e
 DISK="$1"
 # Get absolute path for image name
 IMG_NAME=$(realpath "$2")
-echo $IMG_NAME
-exit
 
 function status ()
 {

@@ -14,7 +14,7 @@ A block device could be something like `/dev/sdb`.
 
 Debian / Ubuntu
 
-`sudo apt install -y git xz-utils`
+`sudo apt install -y git xz-utils bash`
 
 
 ## Example

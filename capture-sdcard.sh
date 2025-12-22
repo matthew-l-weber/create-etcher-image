@@ -5,8 +5,10 @@ set -e
 
 # In format of "/dev/<block device>", i.e., /dev/sdb
 DISK="$1"
-# Absolute path to new img file this script creates
-IMG_NAME="$2"
+# Get absolute path for image name
+IMG_NAME=$(realpath "$2")
+echo $IMG_NAME
+exit
 
 function status ()
 {

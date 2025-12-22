@@ -6,7 +6,7 @@
 
 # Usage
 
-`./capture-sdcard.sh <block device> <full path to image file with name>`
+`./capture-sdcard.sh <block device> <absolute/relative path to image file with name>`
 
 A block device could be something like `/dev/sdb`.
 
@@ -20,9 +20,9 @@ Debian / Ubuntu
 ## Example
 
 
-`./capture-sdcard.sh /dev/sdc /tmp/test-image.img`
+`./capture-sdcard.sh /dev/sdc test-image.img`
 
-Using the block device /dev/sdc, capture a compressed image file to `/tmp/test-image.img.xz`.
+Using the block device /dev/sdc, capture a compressed image file to `test-image.img.xz`.
 
 # Credit
 
